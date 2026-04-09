@@ -241,33 +241,10 @@ void printPattern13(int n)
 }
 void printPattern14(int n)
 {
-    int space = 2 * n - 1;
+    int space = 2 * n -
     for (int i = 0; i < 2 * n - 1; i++)
     {
-        int stars = i + 1;
-        if (i >= n)
-            {stars = 2 * n - i - 1;}
-        // ? stars
-        for (int j = 0; j < stars; j++)
-        {
-            cout << "*";
-        }
-        // ? space
-        for (int j = 0; j < space; j++)
-        {
-            cout << " ";
-        }
-        // ? stars
-        for (int j = 0; j < stars; j++)
-        {
-            cout << "*";
-        }
-        cout << endl;
 
-        if (i >= n - 1)
-            space += 2;
-        else
-            space -= 2;
     }
 }
 

@@ -246,14 +246,14 @@ void printPattern14(int n)
     {
         int stars = i + 1;
         if (i >= n)
-            {stars = 2 * n - i - 1;}
+            {stars = 2 * n - i;}
         // ? stars
         for (int j = 0; j < stars; j++)
         {
             cout << "*";
         }
         // ? space
-        for (int j = 0; j < space; j++)
+        for (int j = 0; j <= space; j++)
         {
             cout << " ";
         }
@@ -264,7 +264,7 @@ void printPattern14(int n)
         }
         cout << endl;
 
-        if (i >= n - 1)
+        if (i >= n)
             space += 2;
         else
             space -= 2;

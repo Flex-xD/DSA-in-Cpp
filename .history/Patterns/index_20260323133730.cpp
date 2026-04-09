@@ -136,146 +136,31 @@ void printPattern8(int n)
         cout << endl;
     }
 }
-void printPattern9(int n)
-{
+void printPattern9(int n){
     for (int i = 0; i < n; i++)
     {
         char ch = 'A' + i;
-        for (int j = 0; j <= i; j++)
-        {
+        for (int j = 0; j <= i;j++) {
             cout << ch << " ";
         }
         cout << endl;
     }
 }
-void printPattern10(int n)
-{
-    for (int i = 0; i < n; i++)
-    {
+void printPattern10 (int n) {
+    for (int i = 0;i<n;i++) {
+        
     }
 }
-void printPattern11(int n)
-{
-    for (int i = 0; i < n; i++)
-    {
-        // ? For space
-        for (int j = 0; j <= n - i - 1; j++)
-        {
-            cout << " ";
-        }
-        // ? For chars
-        int breakpoint = (i * 2 + 1) / 2;
-        char ch = 'A';
-        for (int j = 0; j <= i * 2; j++)
-        {
-            cout << ch;
-            if (breakpoint <= j)
-                ch--;
-            else
-                ch++;
-        }
-        // ? For space
-        for (int j = 0; j <= n - i - 1; j++)
-        {
-            cout << " ";
-        }
-        cout << endl;
-    }
-}
-void printPattern12(int n)
-{
-    for (int i = 0; i < n; i++)
-    {
-        for (char ch = 'E' - i; ch <= 'E'; ch++)
-        {
-            cout << ch << " ";
-        }
-        cout << endl;
-    }
-}
-void printPattern13(int n)
-{
-    int initialSpcae = 0;
-    for (int i = 0; i < n; i++)
-    {
-        // ? Stars
-        for (int j = 0; j < n - i; j++)
-        {
-            cout << "*";
-        }
-        // ? Space
-        for (int j = 0; j < initialSpcae; j++)
-        {
-            cout << " ";
-        }
-        // ? Stars
-        for (int j = 0; j < n - i; j++)
-        {
-            cout << "*";
-        }
-        initialSpcae += 2;
-        cout << endl;
-    }
+void printPattern11 (int n) {
 
-    initialSpcae = 8;
-    for (int i = 0; i < n; i++)
-    {
-        // ? Stars
-        for (int j = 0; j <= i; j++)
-        {
-            cout << "*";
-        }
-        // ? Space
-        for (int j = 0; j < initialSpcae; j++)
-        {
-            cout << " ";
-        }
-        // ? Stars
-        for (int j = 0; j <= i; j++)
-        {
-            cout << "*";
-        }
-        initialSpcae -= 2;
-        cout << endl;
-    }
 }
-void printPattern14(int n)
-{
-    int space = 2 * n - 1;
-    for (int i = 0; i < 2 * n - 1; i++)
-    {
-        int stars = i + 1;
-        if (i >= n)
-            {stars = 2 * n - i - 1;}
-        // ? stars
-        for (int j = 0; j < stars; j++)
-        {
-            cout << "*";
-        }
-        // ? space
-        for (int j = 0; j < space; j++)
-        {
-            cout << " ";
-        }
-        // ? stars
-        for (int j = 0; j < stars; j++)
-        {
-            cout << "*";
-        }
-        cout << endl;
 
-        if (i >= n - 1)
-            space += 2;
-        else
-            space -= 2;
-    }
-}
 
 int main()
 {
     freopen("input.txt", "r", stdin);
     int n;
     cin >> n;
-    printPattern14(n);
+    printPattern11(n);
     return 0;
 }

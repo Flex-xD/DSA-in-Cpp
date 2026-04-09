@@ -253,7 +253,7 @@ void printPattern14(int n)
             cout << "*";
         }
         // ? space
-        for (int j = 0; j < space; j++)
+        for (int j = 0; j <= space; j++)
         {
             cout << " ";
         }
@@ -264,7 +264,7 @@ void printPattern14(int n)
         }
         cout << endl;
 
-        if (i >= n - 1)
+        if (i >= n)
             space += 2;
         else
             space -= 2;
