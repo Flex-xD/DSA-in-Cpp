@@ -246,7 +246,9 @@ void printPattern14(int n)
     {
         int stars = i + 1;
         if (i >= n)
-            {stars = 2 * n - i - 1;}
+        {
+            stars = 2 * n - i - 1;
+        }
         // ? stars
         for (int j = 0; j < stars; j++)
         {
@@ -270,12 +272,43 @@ void printPattern14(int n)
             space -= 2;
     }
 }
+void printPattern15(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            if (i == 0 || j == 0 || i == n - 1 || j == n - 1)
+            {
+                cout << "*";
+            }
+            else
+                cout << " ";
+        }
+        cout << endl;
+    }
+}
+void printPattern16(int n)
+{
+    for (int i = 0; i < n * 2 - 1; i++)
+    {
+        for (int j = 0; j < n * 2 - 1; j++)
+        {
+            int top = i;
+            int left = j;
+            int bottom = (2 * n - 2) - i;
+            int right = (2 * n - 2) - j;
+            cout << (n - min(min(top, left), min(bottom, right)));
+        }
+        cout << endl;
+    }
+}
 
 int main()
 {
     freopen("input.txt", "r", stdin);
     int n;
     cin >> n;
-    printPattern14(n);
+    printPattern16(n);
     return 0;
 }
