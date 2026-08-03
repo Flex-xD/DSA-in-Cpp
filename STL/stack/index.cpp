@@ -10,6 +10,7 @@ void explainStack () {
     st.push(3); // {3 , 2 , 1}
     st.push(4); // {4 , 3  , 2 ,1}
 
+
     st.top(); // ? prints 4 , indexing is not allowed ** st[3] will be invalid **
     st.pop(); // {3 , 2 ,1}; removes the upmost element
 

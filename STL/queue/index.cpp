@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void explainStack () {
+void explainQ () {
     queue <int> qu;
     // ? remember FIFO (first in , first out);
 
@@ -11,7 +11,7 @@ void explainStack () {
 
     qu.back() += 4; // 5 will become 9
     cout << qu.back(); // print 9
-
+    
     cout << qu.front(); // prints 1
 
     qu.pop(); // removes 1

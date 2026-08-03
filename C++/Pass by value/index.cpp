@@ -5,7 +5,6 @@ int addFive (int num) {
     // ? This is a pass by value because here we are using copy of the original num
     int newNum = num + 5;
     return newNum;
-
 }
 
 int main() {

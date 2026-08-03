@@ -2,8 +2,7 @@
 using namespace std;
 
 
-int exoloreVector()
-{
+int exploreVector() {
     // ? This line generates a empty container;
     vector<int> v;
 
@@ -52,9 +51,9 @@ int exoloreVector()
 
     cout << v[0] << " " << v.at(0);
     cout << v.back() << "";
-    // ? .back() is used to access the last element of the container and .at() is used to access the element at specified index
+    // ? .back() is used to access the last element of the container and .at() is used to access the element at specific index
 
-    // ? For accessing all the elements of a vecotor we use for loop
+    // ? For accessing all the elements of a vector we use for loop
 
     for (vector<int>::iterator vecBeginning = v.begin(); vecBeginning != v.end(); vecBeginning++){
         cout << *(vecBeginning) << " ";
@@ -83,9 +82,9 @@ int exoloreVector()
 
     // ? For inserting a vector in another vector
     vector<int> copy (2 ,10);
-    v.insert(v.begin() , copy.begin() , copy.end()); // This will insert the entire vecotr or just give the starting and one after ending address
+    v.insert(v.begin() , copy.begin() , copy.end()); // This will insert the entire vector (can also just give the starting and the ending address)
 
-    cout << v.size(); // prints the size of the vecotor, basically no. of elements
+    cout << v.size(); // prints the size of the vector, basically no. of elements
     
     v.pop_back(); // pops out the last element
 
@@ -97,6 +96,4 @@ int exoloreVector()
     v.clear(); // clears and entire vector no matter how big the size is 
 
     cout << v.empty(); // provided true if empty, and false even if there is a single element
-
-
 }

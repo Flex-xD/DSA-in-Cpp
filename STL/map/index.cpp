@@ -7,11 +7,10 @@ void explainMap() {
     map<pair<int , int> , int> mpp;
 
     mpp[1] = 2; // stores 2 at the key 1 (keys are unique) [ {1 , 2} ]
-    mpp.insert({3 , 1}); // stores 1 at the 3rd key [ { 1 , 2} , {2 , 3}]
-    mpp.emplace(2 , 2); // stores 2 at the 2nd key [ { 1 , 2} , {2 , 3} , {3 , 2}];
+    mpp.insert({3 , 1}); // stores 1 at the 3rd key [ { 1 , 2} , {3 , 1}]
+    mpp.emplace(2 , 2); // stores 2 at the 2nd key [ { 1 , 2} , {2 , 2} , {3 , 2}];
 
-    // mpp[{2 , 3}] = 10; storex [ { {2 , 3}  , 3}]
-
+    // mpp[{2 , 3}] = 10; stores [ { {2 , 3}  , 10}]
     for (auto it:mpp) {
         cout << it.first << it.second << endl;
     };

@@ -15,7 +15,7 @@ void explainSet()
     // Functions of insert in vector
     // can be used also, that only increases efficiency
 
-    // begin , end , rbeing , rend , size
+    // begin , end , rbegin , rend , size
     // empty() and swap() are same as above
 
     // * {1 , 2 ,3 ,4}
@@ -25,7 +25,7 @@ void explainSet()
 
     st.erase(3); // remove the element and maintains the sorted order
 
-    int cnt = st.count(1); // gives the 1 if the element is present and 0 if it does not
+    int cnt = st.count(1); // gives the number of occureces of the element in the container
 
     // ? { 1 , 2 , 3 , 4 , 5};
     auto it1 = st.find(2);

@@ -78,19 +78,18 @@ void printPattern4(int n)
 }
 void printPattern5(int n)
 {
-    // ? numnbers
-    int space = 2 * (n - 1);
-    for (int i = 0; i < n; i++)
+    // ? numbers
+    for (int i = 1; i < n; i++)
     {
         // ? Numbers
-        for (int j = 0; j < i; j++)
+        for (int j = 1; j <= i; j++)
         {
-            cout << j + 1;
+            cout << j ;
         }
         // ? Space
-        for (int j = 0; j < space; j++)
+        for (int j = 0; j < 2*(n-i)-2; j++)
         {
-            cout << " ";
+            cout << "*";
         }
         // ? Numbers
         for (int j = i; j >= 1; j--)
@@ -98,7 +97,6 @@ void printPattern5(int n)
             cout << j;
         }
         cout << endl;
-        space -= 2;
     }
 }
 void printPattern6(int n)
@@ -154,31 +152,23 @@ void printPattern10(int n)
     {
     }
 }
-void printPattern11(int n)
-{
-    for (int i = 0; i < n; i++)
-    {
+void printPattern11(int n) {
+    for (int i = 0; i < n; i++) {
         // ? For space
-        for (int j = 0; j <= n - i - 1; j++)
-        {
-            cout << " ";
-        }
+        for (int j = 0; j <= n - i - 1; j++) {
+            cout << " "; }
         // ? For chars
         int breakpoint = (i * 2 + 1) / 2;
         char ch = 'A';
-        for (int j = 0; j <= i * 2; j++)
-        {
+        for (int j = 0; j <= i * 2; j++) {
             cout << ch;
             if (breakpoint <= j)
                 ch--;
             else
-                ch++;
-        }
+                ch++; }
         // ? For space
-        for (int j = 0; j <= n - i - 1; j++)
-        {
-            cout << " ";
-        }
+        for (int j = 0; j <= n - i - 1; j++) {
+            cout << " ";}
         cout << endl;
     }
 }
@@ -304,11 +294,43 @@ void printPattern16(int n)
     }
 }
 
+void printPattern17(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n - i; j++)
+        {
+            cout << '*' << " ";
+        }
+        cout << endl;
+    }
+}
+
+void printPatternPractice(int n) {
+    char breakpoint = 'A';
+    for (int i = 0 ; i < n ; i++) {
+        for (int j = n-1 ; j > i  ; j--) {
+            cout << '*' << " ";
+        }
+        for (char ch = 'A' ; ch <= 'A' + i ; ch++) {
+            cout << ch << " ";
+        }
+        for (char ch = breakpoint; ch < breakpoint - i + 1; ch--) {
+            if (i == 0) return;
+            if (i >= 2) {
+                breakpoint++;
+            }
+            cout << ch << " ";
+        }
+        cout << endl;
+    }
+}
+
 int main()
 {
     freopen("input.txt", "r", stdin);
     int n;
     cin >> n;
-    printPattern16(n);
+    printPatternPractice(n);
     return 0;
 }
