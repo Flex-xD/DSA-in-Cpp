@@ -41,7 +41,6 @@ void ms(vector<int> &arr, int low, int high) {
 
     ms(arr, low, mid);
     ms(arr, mid + 1, high);
-
     merging(arr, low, mid, high);
 }
 
