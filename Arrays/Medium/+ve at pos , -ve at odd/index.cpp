@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+vector <int> alternateNumbers (vector <int> a) {
+    vector <int> pos , neg;
+    int n = a.size();
+    vector <int> ans (n , 0);
+    for (int i = 0 ; i < n ; i++) {
+        if (a[i] > 0) {
+            pos.push_back(a[i]);
+        } else {
+            neg.push_back(a[i]);
+        }
+    }
+
+    if (pos.size() > neg.size()) {
+        for (int i = 0 ; i < neg.size() ; i++) {
+            ans[i * 2] = pos[i];
+            ans[i * 2 + 1] = neg[i];
+        }
+
+        int index = neg.size() * 2;
+        for (int i = neg.size() ; i < pos.size() ; i++) {
+            ans[index] = pos[i];
+            index++;
+        }
+    } else {
+        for (int i = 0 ; i < pos.size() ; i++) {
+            ans[i * 2] = pos[i];
+            ans[i * 2 + 1] = neg[i];
+        }
+
+        int index = pos.size() * 2;
+        for (int i = pos.size() ; i < neg.size() ; i++) {
+            ans[index] = neg[i];
+            index++;
+        }
+    }
+}
+
